@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>회원가입</title>
+    <link href="final.css" rel="stylesheet">
+    <script src="final.js"></script>
+</head>
+<body>
+    <div class="background">
+        <div class="box">
+            <div class="box__title">코드캠프 회원가입</div>
+            <div class="box__body">
+                <div class="input__info">
+                    <input type="text" class= "name_input" placeholder="이메일을 입력해주세요" id="name1">
+                    <div id="error__email" class="errorBox"></div>
+                    <input type="text" class= "name_input" placeholder="이름을 입력해주세요" id="name2">
+                    <div id="error__name" class="errorBox"></div>
+                    <input type="text" class= "name_input" placeholder="비밀번호를 입력해주세요" id="pw">
+                    <div id="error__pw" class="errorBox"></div>
+                    <input type="text" class= "name_input" placeholder="비밀번호를 다시 입력해주세요" id="re_pw">
+                    <div id="error__repw" class="errorBox"></div>
+                </div>
+                <div class="phone">
+                    <input type="text" id="p1" oninput="changeFocus1()" maxlength="3">-
+                    <input type="text" id="p2" oninput="changeFocus2()" maxlength="4">-
+                    <input type="text" id="p3" oninput="changeFocus3()" maxlength="4">
+                </div>
+                <div class="auth">
+                    <div id="target" class="auth__number">000000</div>
+                    <button onclick="auth()" id="start"class="auth__button" disabled='disabled'>인증번호 전송</button>
+                </div>
+                <div class="timer">
+                    <div id="timer" class="timer__number">3:00</div>
+                    <button disabled onclick="end()" id="finish" class="auth__button" disabled='disabled'>인증완료</button>
+                </div>
+                <select class="selectLocation" id="location">
+                    <option value="" disabled selected>지역을 선택하세요</option>
+                    <option>서울</option>
+                    <option>인천</option>
+                    <option>경기</option>
+                </select>
+                <div id="error__location" class="errorBox"></div>
+                <div class="gendercheck">
+                    <div class="female">
+                        <input type="radio" name="gender" class="circle" id="femaleCircle">
+                        <div class="genderName"> 여성</div>
+                    </div>
+                    <div class="male">
+                        <input type="radio" name="gender" class="circle" id="maleCircle">
+                        <div class="genderName"> 남성</div>
+                    </div>
+                </div>
+                <div id="error__gender" class="errorBox"></div>
+                <div class="divideLine"></div>
+                <button class="signup" id="submit"  onclick="last__check()" disabled='disabled'>가입하기</button>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
